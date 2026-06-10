@@ -11,7 +11,7 @@ DataMind AI is an intelligent data analysis assistant that lets anyone upload a 
 - 📊 Auto-generated charts (histogram, bar, scatter, pie, heatmap, line)
 - 🗃 Data Explorer with statistics
 - 🔢 SQL Query runner (SQLite)
-- 🧠 Powered by Google Gemini AI
+- 🧠 Powered by Grog AI
 
 ## 🛠️ Tech Stack
 | Tool | Purpose |
@@ -22,7 +22,7 @@ DataMind AI is an intelligent data analysis assistant that lets anyone upload a 
 | NumPy | Numerical operations |
 | Plotly | Interactive charts |
 | SQLite | SQL query engine |
-| Google Gemini API | AI insights |
+| Grog API | AI insights |
 
 ## ⚙️ Setup & Run
 
@@ -33,8 +33,8 @@ DataMind AI is an intelligent data analysis assistant that lets anyone upload a 
 pip install -r requirements.txt
 ```
 
-### 3. Get Gemini API Key
-- Go to https://aistudio.google.com
+### 3. Get Grog API Key
+- Go to GrogCloud Console
 - Sign in with Google
 - Click "Get API Key" → "Create API Key"
 - Copy the key
@@ -46,7 +46,6 @@ streamlit run app.py
 
 ### 5. Open browser
 - Go to http://localhost:8501
-- Enter your Gemini API key in the sidebar
 - Upload any CSV file
 - Start asking questions!
 
@@ -63,7 +62,7 @@ ai_data_insights/
 ├── requirements.txt    # Dependencies
 ├── utils/
 │   ├── data_processor.py  # CSV loading, SQL queries
-│   ├── ai_engine.py       # Gemini AI integration
+│   ├── ai_engine.py       # Grog AI integration
 │   └── visualizer.py      # Auto chart generation
 └── README.md
 ```
