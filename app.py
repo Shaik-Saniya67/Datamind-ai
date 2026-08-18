@@ -107,7 +107,7 @@ Stats:\n{df.describe().to_string()}
 Sample (10 rows):\n{df.head(10).to_string()}
 Categories:{cat_info}{corr_info}"""
         response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="llama3-groq-70b-8192-tool-use-preview",
             messages=[
                 {"role": "system", "content": "You are DataMind AI, expert data analyst. Give specific numbers. Use bullet points."},
                 {"role": "user", "content": f"Dataset:\n{data_info}\n\nQuestion: {question}"}
@@ -129,7 +129,7 @@ def generate_auto_insights(df):
 Stats:\n{df.describe().to_string()}
 Categories:{cat_info}"""
         response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="llama3-groq-70b-8192-tool-use-preview",
             messages=[
                 {"role": "system", "content": "You are DataMind AI. Generate exactly 6 key business insights. Each insight must be ONE sentence with specific numbers. Format: bullet points only. Example: '• Electronics contributes 42% of total revenue.'"},
                 {"role": "user", "content": f"Dataset:\n{data_info}\n\nGenerate 6 key insights with specific numbers:"}
@@ -148,7 +148,7 @@ def generate_data_dictionary(df):
             sample = str(df[col].dropna().head(3).tolist())
             col_info += f"\n- {col} (type: {dtype}, sample: {sample})"
         response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="llama3-groq-70b-8192-tool-use-preview",
             messages=[
                 {"role": "system", "content": "You are a data analyst. For each column, give a short 1-line description of what it likely represents. Return as: ColumnName: Description"},
                 {"role": "user", "content": f"Columns:{col_info}\n\nDescribe each column in one line:"}
@@ -193,7 +193,7 @@ def nl_to_sql(df, question):
     try:
         cols = list(df.columns)
         response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="llama3-groq-70b-8192-tool-use-preview",
             messages=[
                 {"role": "system", "content": f"Convert natural language to SQL. Table name is 'data'. Columns: {cols}. Return ONLY the SQL query, nothing else."},
                 {"role": "user", "content": question}
