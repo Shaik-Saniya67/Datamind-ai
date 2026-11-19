@@ -11,7 +11,7 @@ DataMind AI is an intelligent data analysis assistant that lets anyone upload a 
 - 📊 Auto-generated charts (histogram, bar, scatter, pie, heatmap, line)
 - 🗃 Data Explorer with statistics
 - 🔢 SQL Query runner (SQLite)
-- 🧠 Powered by Grog AI
+- 🧠 Powered by groq AI
 
 ## 🛠️ Tech Stack
 | Tool | Purpose |
@@ -22,7 +22,7 @@ DataMind AI is an intelligent data analysis assistant that lets anyone upload a 
 | NumPy | Numerical operations |
 | Plotly | Interactive charts |
 | SQLite | SQL query engine |
-| Grog API | AI insights |
+| groq API | AI insights |
 
 ## ⚙️ Setup & Run
 
@@ -33,8 +33,8 @@ DataMind AI is an intelligent data analysis assistant that lets anyone upload a 
 pip install -r requirements.txt
 ```
 
-### 3. Get Grog API Key
-- Go to GrogCloud Console
+### 3. Get groq API Key
+- Go to groqCloud Console
 - Sign in with Google
 - Click "Get API Key" → "Create API Key"
 - Copy the key
@@ -62,7 +62,7 @@ ai_data_insights/
 ├── requirements.txt    # Dependencies
 ├── utils/
 │   ├── data_processor.py  # CSV loading, SQL queries
-│   ├── ai_engine.py       # Grog AI integration
+│   ├── ai_engine.py       # groq AI integration
 │   └── visualizer.py      # Auto chart generation
 └── README.md
 ```
